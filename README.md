@@ -3,7 +3,7 @@
 
 quickstart.pyを実行する前にcredentials.jsonをquixkstart.pyと同じディレクトリにおいておく。
 
-`$vim ~/.bashrc`でaliasのところに下記のように記述し`source ~/.bashrc`しておく。
+<span>$vim ~/.bashrc</span>でaliasのところに下記のように記述し<span>source ~/.bashrc</span>しておく。
 <span>alias = alias credential='export GOOGLE_APPLICATION_CREDENTIALS="/home/qqqlq/yasu_device/credentials.json"'</span>
 
 quickstart.pyをやればtoken.jsonが生成され、ログイン補完的な感じになる。
