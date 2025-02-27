@@ -3,18 +3,18 @@
 
 quickstart.pyを実行する前にcredentials.jsonをquixkstart.pyと同じディレクトリにおいておく。
 
-<span>$vim ~/.bashrc</span>でaliasのところに下記のように記述し<span>source ~/.bashrc</span>しておく。
-<span>alias = alias credential='export GOOGLE_APPLICATION_CREDENTIALS="/home/qqqlq/yasu_device/credentials.json"'</span>
+$vim ~/.bashrcでaliasのところに下記のように記述しsource ~/.bashrcしておく。
+alias = alias credential='export GOOGLE_APPLICATION_CREDENTIALS="/home/qqqlq/yasu_device/credentials.json"'
 
 quickstart.pyをやればtoken.jsonが生成され、ログイン補完的な感じになる。
 
 実装前に下の3コマンドでlogの準備をしておく
-<span>$mkdir log</span>
-<span>$touch log/fromGoogle.log</span>
-<span>$touch log/fromGoogle-error.log</span>
+$mkdir log
+$touch log/fromGoogle.log
+$touch log/fromGoogle-error.log
 
-<span>crontab -e</span>してfromGoogle.shを一時間ごとに実行する。
-<span>
+crontab -eしてfromGoogle.shを一時間ごとに実行する。
+
 qqqlq@raspberrypi:~/yasu_device/imageProject $ crontab -l
 # Edit this file to introduce tasks to be run by cron.
 #
@@ -42,6 +42,6 @@ qqqlq@raspberrypi:~/yasu_device/imageProject $ crontab -l
 
 0 * * * * bash [fromGoogleに至るパス]/fromGoogle.sh
 0 * * * * /home/qqqlq/pypy/bin/python [sort.pyに至るパス]/sort.py　　　　#これは実行するpythonがどこにあるか　そのpythonでどのファイルを実行するかを示す
-</span>
 
-<span>systemctl status cron</span>でcronが動いているか調べる。
+
+systemctl status cronでcronが動いているか調べる。
