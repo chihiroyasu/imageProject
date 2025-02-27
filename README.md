@@ -9,11 +9,11 @@ quickstart.pyを実行する前にcredentials.jsonをquixkstart.pyと同じデ�
 quickstart.pyをやればtoken.jsonが生成され、ログイン補完的な感じになる。
 
 実装前に下の3コマンドでlogの準備をしておく
-`$mkdir log`
-`$touch log/fromGoogle.log`
-`$touch log/fromGoogle-error.log`
+<span>$mkdir log</span>
+<span>$touch log/fromGoogle.log</span>
+<span>$touch log/fromGoogle-error.log</span>
 
-`crontab -e`してfromGoogle.shを一時間ごとに実行する。
+<span>crontab -e</span>してfromGoogle.shを一時間ごとに実行する。
 <span>
 qqqlq@raspberrypi:~/yasu_device/imageProject $ crontab -l
 # Edit this file to introduce tasks to be run by cron.
@@ -44,4 +44,4 @@ qqqlq@raspberrypi:~/yasu_device/imageProject $ crontab -l
 0 * * * * /home/qqqlq/pypy/bin/python [sort.pyに至るパス]/sort.py　　　　#これは実行するpythonがどこにあるか　そのpythonでどのファイルを実行するかを示す
 </span>
 
-`systemctl status cron`でcronが動いているか調べる。
+<span>systemctl status cron</span>でcronが動いているか調べる。
