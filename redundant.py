@@ -39,6 +39,7 @@ def get_folder_files(folder_id):
 
     if not files:
         print('No files found.')
+        return []
     else:
         # print('Files:')
         # for file in files:
@@ -57,6 +58,7 @@ def search_star_file(folder_id, which):
 
     if not files:
         print('No files found.')
+        return []
     else:
         return files
 
